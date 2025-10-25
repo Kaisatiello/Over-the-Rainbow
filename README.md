@@ -15,13 +15,16 @@ Nell'applicazione per i processi degli effetti digitali, l'obiettivo è usare la
 ## Example Tasks
 Immaginiamo dunque un'applicazione partica dell'algoritmo. I problemi di classificazione binaria si collocano perfettamente all'interno dell'ottimizzazione dei processi per gli effetti visivi (VFX) cinematografici, in quanto gran parte delle decisioni cruciali in un pipeline di produzione complessa possono essere ricondotte a scelte sì/no o A/B. Nei VFX, un problema di classificazione binaria consiste nel prendere un input complesso (un frame, un asset, un set di dati di simulazione) e assegnarlo a una di due categorie definite. Questo è vitale per automatizzare il controllo qualità (QC) e l'allocazione delle risorse. Proponiamo tre problemi possibili, di cui poi ne verrà analizzato nel dettaglio uno. 
 
-1. Controllo Qualità e Rilevamento di Anomalie (QC)
+1. Controllo Qualità e Rilevamento di Anomalie (QC).
+
 Un aspetto critico della produzione di effetti visivi è il controllo qualità (QC) dei frame renderizzati. Dato che gli errori, come glitch, flickering o noise indesiderato, sono spesso molto sottili e si manifestano su migliaia di frame, il rilevamento manuale è inefficiente. La classificazione binaria automatizza questo processo: il sistema analizza vettori di caratteristiche complesse estratti dai frame (ad esempio, misurando le variazioni di contrasto o il rumore spettrale) e decide se il fotogramma è "Accettabile" (Classe 0) o se presenta un'"Anomalia che richiede un rifacimento" (Classe 1).
 
 2. Etichettatura Intelligente e Gestione degli Asset
+
 L'organizzazione delle vaste librerie di asset 3D, texture e suoni può essere notevolmente velocizzata. Invece di taggare manualmente ogni elemento, la classificazione binaria può determinarne automaticamente la natura. Ad esempio, può classificare un modello come "Corpo Cinetico" (un oggetto che richiede una simulazione dinamica) rispetto a uno "Sfondo Statico", oppure differenziare rapidamente tra una "Texture basata su PBR" (pronta per i moderni renderer) e una "Texture Legacy" più datata.
 
 3. Assegnazione Prioritaria delle Risorse di Rendering
+
 Per ridurre i tempi e i costi di calcolo, è fondamentale allocare la potenza di rendering solo dove necessario. La classificazione binaria aiuta a prendere decisioni intelligenti a livello di pixel o regione: il sistema decide se una specifica area del frame è un'"Area Critica" (ad esempio, per dettagli che richiedono un ray tracing molto profondo o un denoising più aggressivo) o se è un'"Area a Bassa Priorità" che può essere calcolata più velocemente o con stime più semplici. Questo garantisce che le risorse vengano spese per massimizzare la qualità percepita.
 
 ## Problema specifico: Classificazione del Noise e degli Artefatti di Rendering
