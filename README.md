@@ -39,8 +39,16 @@ Analisi del Risultato: Confronta teoricamente (o con un piccolo test se la licen
 
 Di seguito vengono riportate in modo schematico le fasi del progetto. 
 
-| **Fase del progetto** | **Ruolo del Classificatore Singularity** | **Vantaggio Quantistico**|
-| --- | --- | --- |
+
+| **Perché usare Singularity**| **Vantaggio Quantistico**|
+| --- | --- |
+| Ottimizzazione di Ensemble (QAOA)	 | Il noise e gli artefatti sono feature complesse e sottili. Il QEEC, ottimizzando l'ensemble con QAOA, può trovare la combinazione ottimale di weak learners per distinguere in modo più preciso e robusto il rumore accettabile da un vero artefatto. |
+| Scalabilità del Problema |Si possono usare feature vector molto dettagliati e ad alta dimensionalità per descrivere ogni frame (es. istogrammi, matrici di co-occorrenza del rumore, o dati di deep pass). Singularity può gestire l'addestramento su un set di dati di milioni di frame (provenienti da una produzione) senza essere limitato dai qubit per la dimensione del feature vector.|
+
+
+
+| **Perché usare Singularity**| **Vantaggio Quantistico**|
+| --- | --- |
 | Rilevamento di Anomalie/Errori	 | Classificare i frame renderizzati per rilevare anomalie o glitch impercettibili ai metodi classici più semplici, ma che richiedono il re-rendering. | 	Maggiore sensibilità nella classificazione di feature sottili, garantendo la qualità del prodotto finale. |
 | Asset Tagging Automatico|Classificare texture, modelli 3D o digital doubles (es. identificare "tipo di superficie: metallo opaco, tessuto a maglia, pelle") per la gestione della libreria di asset. | 	Velocità e/o precisione nell'elaborazione di feature vettoriali complesse derivate da asset ad alta risoluzione.  |
 | Segmentazione del Rendering | Classificare i pixel o le regioni di un frame (su dati di rendering parziali) per identificare le aree critiche che richiedono più sampling o trattamenti specifici (es. aree di motion blur complesso, riflessi) |Potenziale per un'allocazione delle risorse di calcolo più efficiente durante il rendering, riducendo i tempi totali.|
