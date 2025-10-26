@@ -54,7 +54,20 @@ Di seguito vengono riportate in modo schematico le fasi del progetto.
 | Ottimizzazione di Ensemble (QAOA)	 | Il noise e gli artefatti sono feature complesse e sottili. Il QEEC, ottimizzando l'ensemble con QAOA, può trovare la combinazione ottimale di weak learners per distinguere in modo più preciso e robusto il rumore accettabile da un vero artefatto. |
 | Scalabilità del Problema |Si possono usare feature vector molto dettagliati e ad alta dimensionalità per descrivere ogni frame (es. istogrammi, matrici di co-occorrenza del rumore, o dati di deep pass). Singularity può gestire l'addestramento su un set di dati di milioni di frame (provenienti da una produzione) senza essere limitato dai qubit per la dimensione del feature vector.|
 
+# Conclusioni
 
+Il progetto di Classificazione degli Artefatti di Rendering sfrutta in modo strategico l'ottimizzazione quantistica per risolvere un problema critico e costoso nel pipeline dei VFX. Utilizzando il Quantum-Enhanced Ensemble Classifier (QEEC) tramite la funzione Qiskit di Singularity, trasformiamo un tedioso compito di ispezione manuale in un efficiente processo automatico.
+
+La proposta mira a un duplice miglioramento nel settore VFX, sia dal punto di vista tecnologico che industriale. 
+
+🔬 Vantaggio Tecnologico (Quantum)
+Sfruttare gli algoritmi quantistici QAOA (attraverso il QEEC di Singularity) per ottenere un modello di classificazione più robusto e preciso (Classe 1 vs. Classe 0). Questo permette di gestire efficacemente i feature vector ad alta dimensionalità tipici della grafica computerizzata (ad esempio, per la rilevazione di artefatti).
+
+💰 Vantaggio Industriale (Economico)
+Garantire un significativo risparmio di tempo e risorse automatizzando il Controllo Qualità. Questo alleggerisce il carico degli artisti e accelera il throughput complessivo della produzione cinematografica.
+La proposta apportata si prefigge di apportare miglioramenti dal punto di vista tecnologico, dimostrando la capacità di sfruttare gli algoritmi quantistici (QAOA) per ottenere un modello di classificazione più robusto e preciso (Classe 1 vs. Classe 0) rispetto ai metodi classici, gestendo feature vector ad alta dimensionalità tipici della grafica computerizzata.
+
+Industriale: Si garantisce un significativo risparmio di tempo e risorse, alleggerendo il carico degli artisti e accelerando il throughput complessivo della produzione cinematografica.
 
 
 
