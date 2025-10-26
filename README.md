@@ -1,7 +1,8 @@
 # Over the Rainbow
 Il ponte quantistico tra immaginazione e realtà
 # Abstract
-Attualmente, la comunicazione tra la mente del regista e la concretizzazione dell'opera artistica finale è compromessa dai limiti computazionali dei software impiegati. Il progetto presentato si pone l'obiettivo di essere un ponte tra la realtà concreta e l'immaginifico, utilizzando il "Singularity Machine Learning - Classification".
+Le limitazioni computazionali dei software attuali, impattando tempi di rendering e simulazione, frenano la creatività registica e il realismo delle opere VFX. Per superare queste barriere e favorire la realizzazione di idee complesse, è cruciale ottimizzare i processi digitali. Il progetto **Over the rainbow** si propone come soluzione, utilizzando l'efficienza del "Singularity Machine Learning - Classification" di Multiverse Computing per un'ottimizzazione avanzata del pipeline degli effetti visivi.
+
 # Building the quantum bridge
 Attualmente, la comunicazione tra la mente del regista e la concretizzazione dell'opera artistica finale è compromessa dai limiti computazionali dei software impiegati. Tali limitazioni influenzano i tempi di rendering e di simulazione, nonché le tecniche applicabili, con conseguente riduzione del realismo o della fattibilità delle idee creative. Le recenti innovazioni tecnologiche rappresentano un mezzo per stimolare la creatività e favorirne la realizzazione, anziché sostituirla. In tale ambito, come emerso anche nell'introduzione delle challenge, si rende indispensabile un'ottimizzazione dei processi relativi agli effetti digitali. Il progetto presentato si pone l'obiettivo di essere un ponte tra la realtà concreta e l'immaginifico, utilizzando il "Singularity Machine Learning - Classification".
 
@@ -67,7 +68,8 @@ Le tecnologie quantistiche rappresentano il futuro, non una semplice curiosità 
 
 
 
-
+# Bibliografia
+ 
  [1]**[https://quantumzeitgeist.com/an-in-depth-look-at-the-popularity-of-quantum-computing-languages-and-frameworks/]**
  [2]https://quantum.cloud.ibm.com/docs/en/guides/multiverse-computing-singularity
 
