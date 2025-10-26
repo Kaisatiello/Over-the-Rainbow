@@ -27,6 +27,13 @@ L'organizzazione delle vaste librerie di asset 3D, texture e suoni può essere n
 
 Per ridurre i tempi e i costi di calcolo, è fondamentale allocare la potenza di rendering solo dove necessario. La classificazione binaria aiuta a prendere decisioni intelligenti a livello di pixel o regione: il sistema decide se una specifica area del frame è un'"Area Critica" (ad esempio, per dettagli che richiedono un ray tracing molto profondo o un denoising più aggressivo) o se è un'"Area a Bassa Priorità" che può essere calcolata più velocemente o con stime più semplici. Questo garantisce che le risorse vengano spese per massimizzare la qualità percepita.
 
+
+| **Perché usare Singularity**| **Vantaggio Quantistico**|
+| --- | --- |
+| Rilevamento di Anomalie/Errori	 | Classificare i frame renderizzati per rilevare anomalie o glitch impercettibili ai metodi classici più semplici, ma che richiedono il re-rendering. | 	Maggiore sensibilità nella classificazione di feature sottili, garantendo la qualità del prodotto finale. |
+| Asset Tagging Automatico|Classificare texture, modelli 3D o digital doubles (es. identificare "tipo di superficie: metallo opaco, tessuto a maglia, pelle") per la gestione della libreria di asset. | 	Velocità e/o precisione nell'elaborazione di feature vettoriali complesse derivate da asset ad alta risoluzione.  |
+| Segmentazione del Rendering | Classificare i pixel o le regioni di un frame (su dati di rendering parziali) per identificare le aree critiche che richiedono più sampling o trattamenti specifici (es. aree di motion blur complesso, riflessi) |Potenziale per un'allocazione delle risorse di calcolo più efficiente durante il rendering, riducendo i tempi totali.|
+
 ## Problema specifico: Classificazione del Noise e degli Artefatti di Rendering
 Individuiamo un passaggio cruciale nel VFX: il denoising e il controllo qualità (QC) post-produzione. Dopo il rendering a bassa risoluzione (pass) con meno samples per velocizzare la produzione, vengono applicati algoritmi di denoising. A volte, il denoiser introduce artefatti o non riesce a pulire il noise residuo in modo efficace.
 Il problema sta quindi nel rilevare Frame-Level Artifact. 
@@ -49,12 +56,6 @@ Di seguito vengono riportate in modo schematico le fasi del progetto.
 | Scalabilità del Problema |Si possono usare feature vector molto dettagliati e ad alta dimensionalità per descrivere ogni frame (es. istogrammi, matrici di co-occorrenza del rumore, o dati di deep pass). Singularity può gestire l'addestramento su un set di dati di milioni di frame (provenienti da una produzione) senza essere limitato dai qubit per la dimensione del feature vector.|
 
 
-
-| **Perché usare Singularity**| **Vantaggio Quantistico**|
-| --- | --- |
-| Rilevamento di Anomalie/Errori	 | Classificare i frame renderizzati per rilevare anomalie o glitch impercettibili ai metodi classici più semplici, ma che richiedono il re-rendering. | 	Maggiore sensibilità nella classificazione di feature sottili, garantendo la qualità del prodotto finale. |
-| Asset Tagging Automatico|Classificare texture, modelli 3D o digital doubles (es. identificare "tipo di superficie: metallo opaco, tessuto a maglia, pelle") per la gestione della libreria di asset. | 	Velocità e/o precisione nell'elaborazione di feature vettoriali complesse derivate da asset ad alta risoluzione.  |
-| Segmentazione del Rendering | Classificare i pixel o le regioni di un frame (su dati di rendering parziali) per identificare le aree critiche che richiedono più sampling o trattamenti specifici (es. aree di motion blur complesso, riflessi) |Potenziale per un'allocazione delle risorse di calcolo più efficiente durante il rendering, riducendo i tempi totali.|
 
 
 
