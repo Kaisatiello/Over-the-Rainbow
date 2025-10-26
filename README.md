@@ -56,20 +56,14 @@ Di seguito vengono riportate in modo schematico le fasi del progetto.
 
 # Conclusioni
 
-Il progetto di Classificazione degli Artefatti di Rendering sfrutta in modo strategico l'ottimizzazione quantistica per risolvere un problema critico e costoso nel pipeline dei VFX. Utilizzando il Quantum-Enhanced Ensemble Classifier (QEEC) tramite la funzione Qiskit di Singularity, trasformiamo un tedioso compito di ispezione manuale in un efficiente processo automatico.
+Il progetto di "Over the rainbow", per la classificazione degli artefatti di rendering sfrutta in modo strategico l'ottimizzazione quantistica per risolvere un problema critico e costoso nel pipeline dei VFX. Utilizzando il Quantum-Enhanced Ensemble Classifier (QEEC) tramite la funzione Qiskit di Singularity, trasformiamo un tedioso compito di ispezione manuale in un efficiente processo automatico.
 
-La proposta mira a un duplice miglioramento nel settore VFX, sia dal punto di vista tecnologico che industriale. 
+ L'impiego del Quantum-Enhanced Ensemble Classifier (QEEC) mediante la funzionalità Qiskit di Singularity consente la trasformazione di un'onerosa attività di ispezione manuale in un procedimento automatico ed efficiente.
 
-🔬 Vantaggio Tecnologico (Quantum)
-Sfruttare gli algoritmi quantistici QAOA (attraverso il QEEC di Singularity) per ottenere un modello di classificazione più robusto e preciso (Classe 1 vs. Classe 0). Questo permette di gestire efficacemente i feature vector ad alta dimensionalità tipici della grafica computerizzata (ad esempio, per la rilevazione di artefatti).
+La proposta in esame si prefigge di conseguire un duplice miglioramento nel settore VFX, sia dal punto di vista tecnologico che industriale. Attraverso l'impiego di algoritmi quantistici come il QAOA (Qualitative Amplitude Amplification Oscillation), assistiti dal QEEC di Singularity, è possibile ottenere un modello di classificazione che risulta più robusto e preciso (Classe 1 vs. Classe 0). Questo approccio consente una gestione efficace dei feature vector ad alta dimensionalità, tipici della grafica computerizzata, come ad esempio la rilevazione di artefatti.
+L'automazione del Controllo Qualità garantisce un considerevole risparmio di tempo e risorse. Tale approccio consente di alleggerire il carico degli artisti e di accrescere la velocità complessiva della produzione cinematografica.
 
-💰 Vantaggio Industriale (Economico)
-Garantire un significativo risparmio di tempo e risorse automatizzando il Controllo Qualità. Questo alleggerisce il carico degli artisti e accelera il throughput complessivo della produzione cinematografica.
-La proposta apportata si prefigge di apportare miglioramenti dal punto di vista tecnologico, dimostrando la capacità di sfruttare gli algoritmi quantistici (QAOA) per ottenere un modello di classificazione più robusto e preciso (Classe 1 vs. Classe 0) rispetto ai metodi classici, gestendo feature vector ad alta dimensionalità tipici della grafica computerizzata.
-
-Industriale: Si garantisce un significativo risparmio di tempo e risorse, alleggerendo il carico degli artisti e accelerando il throughput complessivo della produzione cinematografica.
-
-
+Le tecnologie quantistiche rappresentano il futuro, non una semplice curiosità intellettuale, ma un partner indispensabile per la creatività umana.
 
 
 
