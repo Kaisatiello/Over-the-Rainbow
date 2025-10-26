@@ -35,17 +35,16 @@ Per ridurre i tempi e i costi di calcolo, è fondamentale allocare la potenza di
 | Segmentazione del Rendering | Classificare i pixel o le regioni di un frame (su dati di rendering parziali) per identificare le aree critiche che richiedono più sampling o trattamenti specifici (es. aree di motion blur complesso, riflessi) |Potenziale per un'allocazione delle risorse di calcolo più efficiente durante il rendering, riducendo i tempi totali.|
 
 ## Problema specifico: Classificazione del Noise e degli Artefatti di Rendering
-Individuiamo un passaggio cruciale nel VFX: il denoising e il controllo qualità (QC) post-produzione. Dopo il rendering a bassa risoluzione (pass) con meno samples per velocizzare la produzione, vengono applicati algoritmi di denoising. A volte, il denoiser introduce artefatti o non riesce a pulire il noise residuo in modo efficace.
-Il problema sta quindi nel rilevare Frame-Level Artifact. 
+Il nostro progetto affronta un passaggio cruciale nel pipeline di produzione di effetti visivi (VFX) che rappresenta un significativo collo di bottiglia: il controllo qualità (QC) post-produzione sui frame renderizzati.
+
+Per accelerare la produzione, i renderer generano spesso un pass iniziale a bassa risoluzione (low-sample count), sul quale vengono poi applicati algoritmi di denoising. Tuttavia, questo processo introduce due difetti difficili da tracciare manualmente: il noise residuo, ovvero il denoiser non riesce a rimuovere tutto il rumore; artefatti da denoising, quando il denoiser stesso genera glitch, flickering o perdite di dettaglio. Il problema si riduce quindi al rilevamento di artefatti a livello di frame (Frame-Level Artifact).
+
+Si può dunque individuare come obiettivo di Classificazione, il determinare se un frame finale (o la sua differenza con la versione non denoised) è "Pulito e Accettabile" (Classe 0) o "Contaminato da Artefatti o Noise Residuo" (Classe 1).
+Dopo il rendering a bassa risoluzione (pass) con meno samples per velocizzare la produzione, vengono applicati algoritmi di denoising. A volte, il denoiser introduce artefatti o non riesce a pulire il noise residuo in modo efficace. Il problema sta quindi nel rilevare Frame-Level Artifact. 
 Obiettivo di Classificazione: Determinare se un frame finale (o la sua differenza con la versione non denoised) è "Pulito e Accettabile" (Classe 0) o "Contaminato da Artefatti o Noise Residuo" (Classe 1).
 
 
 
-Immaginando un'applicazione pratica, prendiamo una task di classificazione nei VFX, come la classificazione automatica del tipo di superficie per 10 categorie di texture.
-Si crea dunque un dataset etichettato di feature vector che rappresentano i dati da classificare.
-**Implementazione con Qiskit Function: Spiega come utilizzeresti l'azione create_fit_predict della funzione "Singularity Machine Learning - Classification" su Qiskit per addestrare il classificatore ibrido e fare previsioni sui dati degli effetti digitali.
-
-Analisi del Risultato: Confronta teoricamente (o con un piccolo test se la licenza/API è disponibile per la challenge) i risultati ottenuti in termini di precisione/velocità rispetto a un classificatore classico standard (come un Random Forest o una SVM).** 
 
 Di seguito vengono riportate in modo schematico le fasi del progetto. 
 
